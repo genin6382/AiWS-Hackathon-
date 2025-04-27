@@ -69,7 +69,7 @@ Additionally, the application tracks users' progress, study history, streaks, an
 
 ### Prerequisites
 
-- Node.js (for frontend)
+- React.js (for frontend)
 - Python 3.x (for backend)
 - AWS account with configured Lambda, S3, and Bedrock
 - Git (for version control)
