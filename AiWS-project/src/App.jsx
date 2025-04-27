@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Home from './components/Home';
 import './App.css';
+import ProfilePage from './components/ProfilePage';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -45,6 +46,7 @@ function App() {
     <animated.div style={fadeIn} className="app-container">
       <Router>
         <Routes>
+
           <Route 
             path="/" 
             element={isAuthenticated ? <Home user={user} logout={logout} /> : <Navigate to="/login" />} 
@@ -56,6 +58,10 @@ function App() {
           <Route 
             path="/register" 
             element={!isAuthenticated ? <Register login={login} /> : <Navigate to="/" />} 
+          />
+          <Route 
+            path="/profile" 
+            element={<ProfilePage user={user}></ProfilePage>}
           />
         </Routes>
       </Router>
