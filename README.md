@@ -19,7 +19,7 @@ The **AI Learning Path Generator** is a web-based application designed to help u
 ## Project Overview
 
 ### Architecure 
-![Alt text](architecture.jpeg)
+![Alt text](Architecture.jpeg)
 
 
 The **AI Learning Path Generator** provides users with the following features:
