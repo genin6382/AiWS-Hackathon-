@@ -80,7 +80,7 @@ Additionally, the application tracks users' progress, study history, streaks, an
 
     ```bash
     git clone https://github.com/your-username/ai-learning-path-generator.git
-    cd ai-learning-path-generator
+    cd AiWS-project
     ```
 
 2. **Install dependencies:**
@@ -88,7 +88,6 @@ Additionally, the application tracks users' progress, study history, streaks, an
     - Frontend (React):
 
       ```bash
-      cd frontend
       npm install
       ```
 
@@ -111,8 +110,7 @@ Additionally, the application tracks users' progress, study history, streaks, an
     - Start the frontend:
 
       ```bash
-      cd frontend
-      npm start
+      npm run dev
       ```
 
     - Start the backend:
@@ -124,7 +122,7 @@ Additionally, the application tracks users' progress, study history, streaks, an
 
 5. **Access the app:**
 
-    Open your browser and navigate to `http://localhost:3000` to start using the AI Learning Path Generator.
+    Open your browser and navigate to `http://localhost:5173` to start using the AI Learning Path Generator.
 
 ## Contributing
 
