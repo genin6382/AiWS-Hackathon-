@@ -139,12 +139,12 @@ function Home({ user, logout }) {
         },
         body: JSON.stringify({
           learning_path: learningPath,
-          userId: userId || 'anonymous'  // Use 'anonymous' if no userId is provided
+          userId: user.id || 'anonymous'  // Use 'anonymous' if no userId is provided
         }),
       });
       
       const data = await response.json();
-      if (!response.ok) { 
+      if (response.ok) { 
         // Success!
         setSaveStatus('success');
         setTimeout(() => setSaveStatus(null), 3000); // Reset status after 3 seconds
