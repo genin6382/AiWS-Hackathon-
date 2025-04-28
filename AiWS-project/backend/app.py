@@ -511,11 +511,11 @@ def save_learning_path():
         }
         
         # Initialize Lambda client
-        lambda_client = boto3.client('lambda', region_name='us-east-1')
+        lambda_client = boto3.client('lambda', region_name='ap-southeast-2')
         
         # Invoke Lambda function
         response = lambda_client.invoke(
-            FunctionName='store-learning-path-lambda',  # Update with your actual Lambda function name
+            FunctionName='aiws-lambda',  
             InvocationType='RequestResponse',
             Payload=json.dumps(lambda_payload)
         )
