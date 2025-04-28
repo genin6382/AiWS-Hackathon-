@@ -46,13 +46,12 @@ def lambda_handler(event, context):
         
         # Initialize S3 client
         s3 = boto3.client('s3')
-        bucket_name = 'aiws-challenge-bucket'
+        bucket_name = 'aiws-challange-bucket'
         
         # Create the complete storage object with metadata
         storage_object = {
             'metadata': metadata,
             'learning_path': learning_path,
-            'mermaid_code': mermaid_code
         }
         
         # Store the complete data JSON
@@ -62,16 +61,7 @@ def lambda_handler(event, context):
             Body=json.dumps(storage_object, indent=2),
             ContentType='application/json'
         )
-        
-        # Store just the mermaid code separately for easy access
-        if mermaid_code:
-            s3.put_object(
-                Bucket=bucket_name,
-                Key=f'learning-paths/{user_id}/{path_id}/flowchart.mmd',
-                Body=mermaid_code,
-                ContentType='text/plain'
-            )
-        
+                
         # Return success response with path details
         return {
             'statusCode': 200,
